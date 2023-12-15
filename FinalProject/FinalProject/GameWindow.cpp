@@ -68,7 +68,6 @@ GameWindow::game_run()
 {
     int error = GAME_CONTINUE;
     if (!al_is_event_queue_empty(event_queue)) {
-        al_wait_for_event(event_queue, event);
         error = process_event();
     }
 
@@ -144,20 +143,18 @@ GameWindow::process_event()
 {
     int instruction = GAME_CONTINUE;
 
-    //al_wait_for_event(event_queue, event);
+    al_wait_for_event(event_queue, &event);
 
-    if(event == NULL)
-        show_err_msg(-1);
 
     redraw = false;
 
-    if(event->type == ALLEGRO_EVENT_TIMER) {
-        if(event->timer.source == timer) {
+    if(event.type == ALLEGRO_EVENT_TIMER) {
+        if(event.timer.source == timer) {
             redraw = true;
 
         }
     }
-    else if(event->type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
+    else if(event.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
         return GAME_EXIT;
     }
     /*TODO:*/
@@ -166,9 +163,9 @@ GameWindow::process_event()
     handle_user_input();
 
     // update each object in game
-    instruction = game_update();
     if(redraw && al_is_event_queue_empty(event_queue)) {
         // Re-draw map
+        instruction = game_update();
         render_map();
         redraw = false;
     }
@@ -178,7 +175,7 @@ GameWindow::process_event()
 void
 GameWindow::handle_user_input()
 {
-    switch(event->type)
+    switch(event.type)
     {
         case ALLEGRO_EVENT_TIMER:
             for(int i = 0; i < 3; i++)
@@ -188,22 +185,22 @@ GameWindow::handle_user_input()
                 key_state[i] &= 1;
             break;
         case ALLEGRO_EVENT_MOUSE_BUTTON_DOWN:
-            mouse[event->mouse.button] = 1 | 2;
+            mouse[event.mouse.button] = 1 | 2;
             mousestate = 1 | 2;
             break;
         case ALLEGRO_EVENT_MOUSE_BUTTON_UP:
-            mouse[event->mouse.button] &= 2;
+            mouse[event.mouse.button] &= 2;
             mousestate &= 2;
             break;
         case ALLEGRO_EVENT_MOUSE_AXES:
-            mouse_pos.x = event->mouse.x;
-            mouse_pos.y = event->mouse.y;
+            mouse_pos.x = event.mouse.x;
+            mouse_pos.y = event.mouse.y;
             break;
         case ALLEGRO_EVENT_KEY_DOWN:
-            key_state[event->keyboard.keycode] = 1 | 2;
+            key_state[event.keyboard.keycode] = 1 | 2;
             break;
         case ALLEGRO_EVENT_KEY_UP:
-            key_state[event->keyboard.keycode] &= 2;
+            key_state[event.keyboard.keycode] &= 2;
             break;
     }
 }

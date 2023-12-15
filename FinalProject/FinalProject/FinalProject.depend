@@ -289,7 +289,7 @@
 1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_font.h
 	"allegro5/allegro.h"
 
-1702573248 c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.h
+1702624521 c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.h
 	<allegro5/allegro5.h>
 	<allegro5/allegro_font.h>
 	<allegro5/allegro_audio.h>
@@ -319,7 +319,7 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1702573307 source:c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.cpp
+1702626198 source:c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.cpp
 	"GameWindow.h"
 	"global.h"
 	"DataCenter.h"
@@ -333,29 +333,29 @@
 1702537941 source:c:\users\user\onedrive\desktop\finalproject\finalproject\global.cpp
 	"global.h"
 
-1702563670 source:c:\users\user\onedrive\desktop\finalproject\finalproject\player.cpp
+1702626419 source:c:\users\user\onedrive\desktop\finalproject\finalproject\player.cpp
 	"Player.h"
 
 1702560101 c:\users\user\onedrive\desktop\finalproject\finalproject\player.h
 	"global.h"
 	"tool.h"
 
-1702573506 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.cpp
+1702626187 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.cpp
 	"ParticleSystem.h"
 	"DataCenter.h"
 
-1702573321 c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.h
-	<vector>
+1702624765 c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.h
+	<deque>
 	<algorithm>
 	"global.h"
 	"Particle.h"
 	"tool.h"
 
-1702561192 c:\users\user\onedrive\desktop\finalproject\finalproject\particle.h
+1702625300 c:\users\user\onedrive\desktop\finalproject\finalproject\particle.h
 	"global.h"
 	"tool.h"
 
-1702562957 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particle.cpp
+1702626121 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particle.cpp
 	"Particle.h"
 
 1702561410 c:\users\user\onedrive\desktop\finalproject\finalproject\tool.h

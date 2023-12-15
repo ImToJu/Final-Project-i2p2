@@ -3,7 +3,7 @@ void
 Player::player_init()
 {
     pos = Vec2(200, 200);
-    shootCD.t = 0.0f, shootCD.cd = .1f;
+    shootCD.t = 0.0f, shootCD.cd = .5f;
     speed = player_speed;
     fly_time = Vec2(0, player_fly_time);
 }
@@ -53,13 +53,6 @@ Player::player_movement()
         nxtv.y += 980 / FPS;
     }
 
-    // Shoot Force
-    if(onFire){
-        Vec2 force_dir = pos - mouse_pos;
-        Normalize(force_dir);
-        Apply_Force(nxtv, force_dir, 1, 1.0/FPS);
-    }
-
     velocity = nxtv;
     // update next position by velocity
     nxt = nxt + velocity / FPS;
@@ -81,7 +74,6 @@ Player::player_movement()
 void
 Player::player_attack()
 {
-
     if(shootCD.t < shootCD.cd) {
         shootCD.t += 1.f/FPS;
         onFire = false;
@@ -91,6 +83,12 @@ Player::player_attack()
             onFire = true;
             shootCD.t = 0;
         }
+    }
+    // Shoot Force
+    if(onFire){
+        Vec2 force_dir = pos - mouse_pos;
+        Normalize(force_dir);
+        Apply_Force(velocity, force_dir, 1, 1.0/FPS);
     }
 }
 

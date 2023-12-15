@@ -1,7 +1,7 @@
 #ifndef PARTICLESYSTEM_H_INCLUDED
 #define PARTICLESYSTEM_H_INCLUDED
 
-#include <vector>
+#include <deque>
 #include <algorithm>
 #include "global.h"
 #include "Particle.h"
@@ -20,7 +20,7 @@ public:
     int GetAmmoSize() { return ammo.size(); }
 
 private:
-    std::vector<Particle> ammo;
+    std::deque<Particle*> ammo;
 
 };
 

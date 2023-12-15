@@ -12,7 +12,7 @@ class Particle{
 public:
     Vec2 pos, velocity;
     CoolDownCounter lifetime;
-    Particle(void) {}
+    Particle(void) = default;
     //Particle(Vec2 p, Vec2 v, float s, Vec2 l, ALLEGRO_COLOR c): pos(p), velocity(v), speed(s), lifetime(l), color(c) {}
     void particle_init(void);
     void particle_update(void);

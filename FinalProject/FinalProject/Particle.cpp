@@ -22,6 +22,6 @@ void
 Particle::particle_render()
 {
     //al_draw_circle(pos.x, pos.y, radius, color, 3);
-    al_draw_pixel(pos.x, pos.y, WHITE);
-    //al_draw_filled_rectangle(pos.x-2, pos.y-2, pos.x+2, pos.y+2, WHITE);
+    //al_draw_pixel(pos.x, pos.y, WHITE);
+    al_draw_filled_rectangle(pos.x-2, pos.y-2, pos.x+2, pos.y+2, WHITE);
 }

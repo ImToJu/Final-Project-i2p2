@@ -56,7 +56,7 @@ private:
     ALLEGRO_FONT *Large_font = NULL;
 
     ALLEGRO_EVENT_QUEUE *event_queue = NULL;
-    ALLEGRO_EVENT *event = NULL;
+    ALLEGRO_EVENT event;
     ALLEGRO_TIMER *timer = NULL;
 
     DataPanel *DP = new DataPanel();
