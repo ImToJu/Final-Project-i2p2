@@ -23,5 +23,7 @@ Particle::particle_render()
 {
     //al_draw_circle(pos.x, pos.y, radius, color, 3);
     //al_draw_pixel(pos.x, pos.y, WHITE);
-    al_draw_filled_rectangle(pos.x-2, pos.y-2, pos.x+2, pos.y+2, WHITE);
+    //al_draw_filled_rectangle(pos.x-2, pos.y-2, pos.x+2, pos.y+2, WHITE);
+    al_set_blender(ALLEGRO_ADD, ALLEGRO_ALPHA, ALLEGRO_ALPHA);
+    al_draw_filled_rectangle(pos.x-10, pos.y-10, pos.x+10, pos.y+10, al_color_hsl(255, 0.5, 0.2) );
 }
