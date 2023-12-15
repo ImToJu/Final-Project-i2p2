@@ -1,0 +1,387 @@
+# depslib dependency file v1.0
+1702230676 source:c:\users\user\onedrive\desktop\finalproject\finalproject\main.cpp
+	"GameWindow.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro5.h
+	"allegro.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro.h
+	"allegro5/base.h"
+	"allegro5/altime.h"
+	"allegro5/bitmap.h"
+	"allegro5/bitmap_draw.h"
+	"allegro5/bitmap_io.h"
+	"allegro5/bitmap_lock.h"
+	"allegro5/blender.h"
+	"allegro5/clipboard.h"
+	"allegro5/color.h"
+	"allegro5/config.h"
+	"allegro5/cpu.h"
+	"allegro5/debug.h"
+	"allegro5/display.h"
+	"allegro5/drawing.h"
+	"allegro5/error.h"
+	"allegro5/events.h"
+	"allegro5/file.h"
+	"allegro5/fixed.h"
+	"allegro5/fmaths.h"
+	"allegro5/fshook.h"
+	"allegro5/fullscreen_mode.h"
+	"allegro5/haptic.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/memory.h"
+	"allegro5/monitor.h"
+	"allegro5/mouse.h"
+	"allegro5/mouse_cursor.h"
+	"allegro5/path.h"
+	"allegro5/render_state.h"
+	"allegro5/shader.h"
+	"allegro5/system.h"
+	"allegro5/threads.h"
+	"allegro5/timer.h"
+	"allegro5/tls.h"
+	"allegro5/touch_input.h"
+	"allegro5/transformations.h"
+	"allegro5/utf8.h"
+	"allegro5/alcompat.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\base.h
+	<errno.h>
+	<limits.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<sys/types.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"allegro5/internal/alconfig.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\internal\alconfig.h
+	"allegro5/platform/alplatf.h"
+	"allegro5/platform/alwatcom.h"
+	"allegro5/platform/almngw32.h"
+	"allegro5/platform/albcc32.h"
+	"allegro5/platform/almsvc.h"
+	"allegro5/platform/aliphonecfg.h"
+	"allegro5/platform/alosxcfg.h"
+	"allegro5/platform/alandroidcfg.h"
+	"allegro5/platform/alraspberrypicfg.h"
+	"allegro5/platform/alucfg.h"
+	"allegro5/platform/allegro_sdl_config.h"
+	"allegro5/platform/astdint.h"
+	"allegro5/platform/astdbool.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\alplatf.h
+
+1702202685 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\aliphonecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\alosxcfg.h
+	"allegro5/platform/alplatf.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\alandroidcfg.h
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\alraspberrypicfg.h
+	<fcntl.h>
+	<unistd.h>
+	<sys/types.h>
+
+1702202685 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunix.h"
+	"allegro5/platform/alplatf.h"
+
+1702202685 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\alunix.h
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\allegro_sdl_config.h
+	<fcntl.h>
+	<unistd.h>
+
+1702202685 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+	<limits.h>
+
+1702202685 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\platform\astdbool.h
+	<stdbool.h>
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\altime.h
+	"allegro5/base.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\bitmap.h
+	"allegro5/color.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\color.h
+	"allegro5/base.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\bitmap_draw.h
+	"allegro5/bitmap.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\bitmap_io.h
+	"allegro5/bitmap.h"
+	"allegro5/file.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\file.h
+	"allegro5/base.h"
+	"allegro5/path.h"
+	"allegro5/utf8.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\path.h
+	"allegro5/base.h"
+	"allegro5/utf8.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\utf8.h
+	"allegro5/base.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\bitmap_lock.h
+	"allegro5/bitmap.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\blender.h
+	"allegro5/base.h"
+	"allegro5/color.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\clipboard.h
+	"allegro5/base.h"
+	"allegro5/display.h"
+	"allegro5/utf8.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\display.h
+	"allegro5/bitmap.h"
+	"allegro5/color.h"
+	"allegro5/events.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\events.h
+	"allegro5/altime.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\config.h
+	"allegro5/file.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\cpu.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\debug.h
+	<assert.h>
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\drawing.h
+	"allegro5/color.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\error.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\fixed.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\fmaths.h
+	"allegro5/base.h"
+	"allegro5/fixed.h"
+	"allegro5/inline/fmaths.inl"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\inline\fmaths.inl
+	"allegro5/error.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\fshook.h
+	"allegro5/base.h"
+	"allegro5/file.h"
+	"allegro5/path.h"
+	<sys/types.h>
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\fullscreen_mode.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\haptic.h
+	"allegro5/base.h"
+	"allegro5/display.h"
+	"allegro5/events.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/mouse.h"
+	"allegro5/touch_input.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\joystick.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\keyboard.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+	"allegro5/keycodes.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\keycodes.h
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\mouse.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\touch_input.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\memory.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\monitor.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\mouse_cursor.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\render_state.h
+	"allegro5/base.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\shader.h
+	"allegro5/base.h"
+	"allegro5/transformations.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\transformations.h
+	"allegro5/display.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\system.h
+	"allegro5/config.h"
+	"allegro5/path.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\threads.h
+	"allegro5/altime.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\timer.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1702202684 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\tls.h
+	"allegro5/base.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\alcompat.h
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_font.h
+	"allegro5/allegro.h"
+
+1702573248 c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.h
+	<allegro5/allegro5.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_audio.h>
+	"allegro5/allegro_ttf.h"
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+	<list>
+	<time.h>
+	"DataPanel.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_audio.h
+	"allegro5/allegro.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_acodec.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_audio.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_image.h
+	"allegro5/base.h"
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_primitives.h
+	<allegro5/allegro.h>
+
+1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_ttf.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_font.h"
+
+1702573307 source:c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.cpp
+	"GameWindow.h"
+	"global.h"
+	"DataCenter.h"
+	<iostream>
+
+1702554984 c:\users\user\onedrive\desktop\finalproject\finalproject\global.h
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_primitives.h>
+	"tool.h"
+
+1702537941 source:c:\users\user\onedrive\desktop\finalproject\finalproject\global.cpp
+	"global.h"
+
+1702563670 source:c:\users\user\onedrive\desktop\finalproject\finalproject\player.cpp
+	"Player.h"
+
+1702560101 c:\users\user\onedrive\desktop\finalproject\finalproject\player.h
+	"global.h"
+	"tool.h"
+
+1702573506 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.cpp
+	"ParticleSystem.h"
+	"DataCenter.h"
+
+1702573321 c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.h
+	<vector>
+	<algorithm>
+	"global.h"
+	"Particle.h"
+	"tool.h"
+
+1702561192 c:\users\user\onedrive\desktop\finalproject\finalproject\particle.h
+	"global.h"
+	"tool.h"
+
+1702562957 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particle.cpp
+	"Particle.h"
+
+1702561410 c:\users\user\onedrive\desktop\finalproject\finalproject\tool.h
+	<cmath>
+	<iostream>
+	<time.h>
+
+1702561343 source:c:\users\user\onedrive\desktop\finalproject\finalproject\tool.cpp
+	"tool.h"
+
+1702543656 c:\users\user\onedrive\desktop\finalproject\finalproject\datacenter.h
+	<vector>
+	<list>
+	"Player.h"
+	"ParticleSystem.h"
+
+1702543082 source:c:\users\user\onedrive\desktop\finalproject\finalproject\datacenter.cpp
+	"DataCenter.h"
+
+1702572854 source:c:\users\user\onedrive\desktop\finalproject\finalproject\datapanel.cpp
+	"DataPanel.h"
+	<string>
+	"DataCenter.h"
+	"Player.h"
+
+1702544341 c:\users\user\onedrive\desktop\finalproject\finalproject\datapanel.h
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_ttf.h>
+
