@@ -2,6 +2,7 @@
 #include <string>
 #include "DataCenter.h"
 #include "Player.h"
+#include <allegro5/allegro_ttf.h>
 
 void
 DataPanel::DataPanel_init()

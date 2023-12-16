@@ -4,8 +4,10 @@
 
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_color.h>//NEW
+#include <allegro5/allegro.h>//NEW
 
-#include "tool.h"
+#include "common/math.h"
 
 #define WHITE al_map_rgb(255, 255, 255)
 #define BLACK al_map_rgb(0, 0, 0)

@@ -10,7 +10,7 @@ void
 ParticleSystem::particle_sys_update()
 {
     if(DC->get_Player().OnFire()){
-        DC->get_ParticleSystem().particle_sys_add(20);
+        DC->get_ParticleSystem().particle_sys_add(5);
     }
     // update ammo
     for(auto it : ammo){
@@ -37,12 +37,16 @@ void
 ParticleSystem::particle_sys_add(int num)
 {
     for(int i=0; i<num; ++i){
-        Particle *p = new Particle();
-        p->particle_init();
-        p->velocity = mouse_pos - DC->get_Player().GetPos();
-        p->velocity = randVec(p->velocity, ALLEGRO_PI/12.0f);
-        Normalize(p->velocity);
-        p->pos = DC->get_Player().GetPos();
+        Particle *p = new Particle(DC->get_Player().GetPos());
+
+        Vec2 v = MathVec2::normalize(mouse_pos - DC->get_Player().GetPos());
+
+        float r = DC->get_rng().getRange(ALLEGRO_PI/6.0f);
+        v = MathVec2::rotateVec(v, r);
+
+        r = DC->get_rng().getRange(0.5f, 1.5f);
+        p->addVelocity(v * r * ammo_speed);
+
         ammo.emplace_back(p);
     }
 

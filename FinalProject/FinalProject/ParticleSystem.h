@@ -1,11 +1,10 @@
 #ifndef PARTICLESYSTEM_H_INCLUDED
 #define PARTICLESYSTEM_H_INCLUDED
 
-#include <deque>
+#include <list>
 #include <algorithm>
 #include "global.h"
-#include "Particle.h"
-#include "tool.h"
+#include "object/Particle.h"
 
 const int MAX_AMMO = 10000;
 
@@ -20,7 +19,7 @@ public:
     int GetAmmoSize() { return ammo.size(); }
 
 private:
-    std::deque<Particle*> ammo;
+    std::list<Particle*> ammo;
 
 };
 

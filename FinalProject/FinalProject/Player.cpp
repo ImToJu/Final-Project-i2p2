@@ -1,9 +1,11 @@
 #include "Player.h"
+#include "common/math.h"
+
 void
 Player::player_init()
 {
-    pos = Vec2(200, 200);
-    shootCD.t = 0.0f, shootCD.cd = .5f;
+    Object({200, 200});
+    shootCD.t = 0.0f, shootCD.cd = player_shoot_cd;
     speed = player_speed;
     fly_time = Vec2(0, player_fly_time);
 }
@@ -19,30 +21,29 @@ Player::player_update()
 void
 Player::player_movement()
 {
-    // next position
-    Vec2 nxt = pos;
-    // next velocity
-    Vec2 nxtv = velocity;
-
     // horizon input
     float input_dir_horizon = 0;
-    if(key_state[ALLEGRO_KEY_D]){
+    if( key_state[ALLEGRO_KEY_D] && !key_state[ALLEGRO_KEY_A] ){
         input_dir_horizon += 1;
+        if(getVelocity().x < player_speed){
+            last_position.x -= 1;
+        }
     }
-    if(key_state[ALLEGRO_KEY_A]){
+    if( key_state[ALLEGRO_KEY_A] && !key_state[ALLEGRO_KEY_D] ){
         input_dir_horizon -= 1;
+        if(getVelocity().x > -player_speed){
+            last_position.x += 1;
+        }
     }
-    nxt.x += input_dir_horizon * 10;
-
     // vertical input & jump
     if(key_state[ALLEGRO_KEY_SPACE] && fly_time.x > 0){
         fly_time.x -= 2.f/FPS;
         if(fly_time.x < 0){
             fly_time.x = -0.5f;
         }
-        if(fly_time.x > 0)
-            nxtv.y = -500;
-        //Vec2::Apply_Force(nxtv, Vec2(0, -1), 10, 1.0/FPS);
+        if(fly_time.x > 0){
+            last_position.y = position.y + 10;
+        }
     }
     fly_time.x += 1.f/FPS;
     if(fly_time.x > fly_time.y){
@@ -50,25 +51,24 @@ Player::player_movement()
     }
     // apply gravity
     if(!key_state[ALLEGRO_KEY_SPACE]){
-        nxtv.y += 980 / FPS;
+        acceleration.y += 980;
     }
-
-    velocity = nxtv;
-    // update next position by velocity
-    nxt = nxt + velocity / FPS;
 
     // check collide
 
+
+    // Shoot Force
+    if(onFire){
+        Vec2 force_dir = position - mouse_pos;
+        force_dir = MathVec2::normalize(force_dir);
+        acceleration = acceleration + force_dir * 40000;
+    }
+
+    update(1/FPS);
+
     // confine next position
-    Vec2 prev_pos = nxt;
-    clamp(nxt.x, 0 + player_width, window_width - player_width);
-    clamp(nxt.y, 0 + player_height, window_height - player_height);
-
-    // if collide with something, reset velocity
-    if(prev_pos.x != nxt.x) velocity.x = 0;
-    if(prev_pos.y != nxt.y) velocity.y = 0;
-
-    pos = nxt;
+    position.x = Math::clamp(position.x, 0 + player_width, window_width - player_width);
+    position.y = Math::clamp(position.y, 0 + player_height, window_height - player_height);
 }
 
 void
@@ -84,17 +84,11 @@ Player::player_attack()
             shootCD.t = 0;
         }
     }
-    // Shoot Force
-    if(onFire){
-        Vec2 force_dir = pos - mouse_pos;
-        Normalize(force_dir);
-        Apply_Force(velocity, force_dir, 1, 1.0/FPS);
-    }
 }
 
 void
 Player::player_render()
 {
-    al_draw_circle(pos.x, pos.y, player_height, WHITE, 3);
+    al_draw_circle(position.x, position.y, player_height, WHITE, 3);
     //if(onFire) al_draw_circle(pos.x, pos.y, 5, ORANGE_LIGHT, 3);
 }
