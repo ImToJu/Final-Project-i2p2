@@ -1,14 +1,21 @@
 #pragma once
 #include <random>
+#include <chrono>
 
 class RNGf
 {
 public:
 
     RNGf()
-		: gen( rd() )
-		, dis(0.0f, 1.0f)
-	{}
+	{
+	    reseed();
+	    dis = std::uniform_real_distribution<float>(0.0f, 1.0f);
+	}
+
+	void reseed()
+	{
+        gen.seed( static_cast<unsigned> (std::chrono::system_clock::now().time_since_epoch().count()) );
+	}
 
     float get()
 	{
@@ -26,7 +33,6 @@ public:
 	}
 
 private:
-    std::random_device rd;
     std::mt19937 gen;
     std::uniform_real_distribution<float> dis;
 };

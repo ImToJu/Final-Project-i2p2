@@ -6,7 +6,7 @@
 #include "global.h"
 #include "object/Particle.h"
 
-const int MAX_AMMO = 10000;
+const int AMMO_DAMPING = 0;
 
 class ParticleSystem{
 public:

@@ -1,28 +1,21 @@
 #pragma once
 
 #include "../common/math.h"
+#include "../common/vec2.h"
 
-class Object
+struct Object
 {
-public:
     Vec2 position;
     Vec2 last_position;
     Vec2 acceleration;
-    float velocity_damping = 40.0f;
 
-    Object() {};
+    Object() = default;
 
     explicit
-    Object(Vec2 pos, float damping)
-        : position(pos)
-        , last_position(pos)
-        , velocity_damping(damping)
+    Object(Vec2 _position)
+        : position(_position)
+        , last_position(_position)
     {}
-
-    void setDamping(float damping)
-    {
-        velocity_damping = damping;
-    }
 
     void setPosition(Vec2 pos)
     {
@@ -34,7 +27,10 @@ public:
     {
         const Vec2 dx = position - last_position;
 
-        const Vec2 new_position = position + dx + (acceleration - dx * velocity_damping) * (dt * dt);
+        // air friction
+        constexpr float VELOCITY_DAMPING = 40.0f;
+
+        const Vec2 new_position = position + dx + (acceleration - dx * VELOCITY_DAMPING) * (dt * dt);
         last_position           = position;
         position                = new_position;
         acceleration = {0.0f, 0.0f};
@@ -62,16 +58,7 @@ public:
 
     void addVelocity(Vec2 v)
     {
-        last_position = last_position - v;
-    }
-
-    void confineVelocity(float threshold)
-    {
-        if(getSpeed() > threshold){
-            last_position = position;
-            Vec2 v = MathVec2::normalize(getVelocity()) * threshold;
-            addVelocity(v);
-        }
+        last_position -= v;
     }
 
     void setPositionRemainSpeed(Vec2 new_position)
@@ -83,6 +70,6 @@ public:
 
     void move(Vec2 dx)
     {
-        position = position + dx;
+        position += dx;
     }
 };
