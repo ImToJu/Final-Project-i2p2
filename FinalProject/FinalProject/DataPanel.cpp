@@ -7,6 +7,7 @@
 void
 DataPanel::DataPanel_init()
 {
+    printf("Data Panel Initializing...\n");
     font = al_load_ttf_font("./font/Consolas.ttf", 20, 0);
     if(font==NULL){ exit(9); }
 }
@@ -15,9 +16,9 @@ void
 DataPanel::DataPanel_render()
 {
     char str[100];
-    sprintf(str, "fly_time.x: %f", DC->get_Player().GetFlyTime().x);
+    sprintf(str, "fly_time.t: %f", DC->get_Player().GetFlyTime().t);
     al_draw_text(font, WHITE, 10, 100, 0, str);
-    sprintf(str, "fly_time.y: %f", DC->get_Player().GetFlyTime().y);
+    sprintf(str, "fly_time.cd: %f", DC->get_Player().GetFlyTime().cd);
     al_draw_text(font, WHITE, 10, 120, 0, str);
     sprintf(str, "velocity.x: %f", DC->get_Player().GetVelocity().x);
     al_draw_text(font, WHITE, 10, 140, 0, str);

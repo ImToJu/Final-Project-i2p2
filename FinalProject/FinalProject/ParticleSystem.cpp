@@ -3,14 +3,14 @@
 void
 ParticleSystem::particle_sys_init()
 {
-
+    printf("Particle System Initializing...\n");
 }
 
 void
 ParticleSystem::particle_sys_update()
 {
     if(DC->get_Player().OnFire()){
-        DC->get_ParticleSystem().particle_sys_add(5);
+        DC->get_ParticleSystem().particle_sys_add(100);
     }
     // update ammo
     for(auto it : ammo){
@@ -29,6 +29,8 @@ void
 ParticleSystem::particle_sys_render()
 {
     for(auto it : ammo){
+        if(it->position.x < window_width  + 100 && it->position.x > -100
+        && it->position.y < window_height + 100 && it->position.y > -100)
         it->particle_render();
     }
 }
@@ -37,7 +39,7 @@ void
 ParticleSystem::particle_sys_add(int num)
 {
     for(int i=0; i<num; ++i){
-        Particle *p = new Particle(DC->get_Player().GetPos());
+        Particle *p = new Particle(DC->get_Player().GetPos(), AMMO_DAMPING);
 
         Vec2 v = MathVec2::normalize(mouse_pos - DC->get_Player().GetPos());
 

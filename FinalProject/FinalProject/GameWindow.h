@@ -13,6 +13,7 @@
 #include <time.h>
 
 #include "DataPanel.h"
+#include "Scene.h"
 
 #define GAME_INIT -1
 #define GAME_SETTING 0

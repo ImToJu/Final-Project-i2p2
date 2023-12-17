@@ -47,16 +47,19 @@
 		<Unit filename="GameWindow.cpp" />
 		<Unit filename="GameWindow.h" />
 		<Unit filename="Main.cpp" />
-		<Unit filename="Particle.cpp" />
-		<Unit filename="Particle.h" />
 		<Unit filename="ParticleSystem.cpp" />
 		<Unit filename="ParticleSystem.h" />
 		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
+		<Unit filename="Scene.cpp" />
+		<Unit filename="Scene.h" />
+		<Unit filename="common/math.h" />
+		<Unit filename="common/random_number.h" />
 		<Unit filename="global.cpp" />
 		<Unit filename="global.h" />
-		<Unit filename="tool.cpp" />
-		<Unit filename="tool.h" />
+		<Unit filename="object/Particle.cpp" />
+		<Unit filename="object/Particle.h" />
+		<Unit filename="object/object.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

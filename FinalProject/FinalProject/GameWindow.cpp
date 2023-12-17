@@ -58,9 +58,13 @@ GameWindow::GameWindow()
 void
 GameWindow::game_init()
 {
+    DC->get_Scene().scene_init();
+
     DC->get_Player().player_init();
     DC->get_ParticleSystem().particle_sys_init();
     DP->DataPanel_init();
+    DC->get_rng().reseed();
+
 }
 
 int
@@ -81,9 +85,6 @@ void
 GameWindow::game_play()
 {
     int msg;
-
-    // set random seed
-    srand(time(NULL));
 
     msg = -1;
     game_reset();
@@ -128,13 +129,13 @@ GameWindow::game_destroy()
 
     al_destroy_display(display);
     al_destroy_event_queue(event_queue);
-    al_destroy_font(font);
-    al_destroy_font(Medium_font);
-    al_destroy_font(Large_font);
+    //al_destroy_font(font);
+    //al_destroy_font(Medium_font);
+    //al_destroy_font(Large_font);
 
     al_destroy_timer(timer);
 
-    al_destroy_bitmap(icon);
+    //al_destroy_bitmap(icon);
     delete DP;
 }
 
@@ -210,6 +211,8 @@ GameWindow::render_map()
 {
     // reset canva
     al_clear_to_color(BLACK);
+
+    DC->get_Scene().scene_render();
 
     DC->get_Player().player_render();
     DC->get_ParticleSystem().particle_sys_render();

@@ -289,7 +289,7 @@
 1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_font.h
 	"allegro5/allegro.h"
 
-1702624521 c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.h
+1702802505 c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.h
 	<allegro5/allegro5.h>
 	<allegro5/allegro_font.h>
 	<allegro5/allegro_audio.h>
@@ -301,6 +301,7 @@
 	<list>
 	<time.h>
 	"DataPanel.h"
+	"Scene.h"
 
 1702202683 c:\users\user\onedrive\desktop\finalproject\allegro\include\allegro5\allegro_audio.h
 	"allegro5/allegro.h"
@@ -319,35 +320,37 @@
 	"allegro5/allegro.h"
 	"allegro5/allegro_font.h"
 
-1702626198 source:c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.cpp
+1702802757 source:c:\users\user\onedrive\desktop\finalproject\finalproject\gamewindow.cpp
 	"GameWindow.h"
 	"global.h"
 	"DataCenter.h"
 	<iostream>
 
-1702720344 c:\users\user\onedrive\desktop\finalproject\finalproject\global.h
+1702747615 c:\users\user\onedrive\desktop\finalproject\finalproject\global.h
 	<allegro5/allegro_font.h>
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_color.h>
 	<allegro5/allegro.h>
 	"common/math.h"
 
-1702537941 source:c:\users\user\onedrive\desktop\finalproject\finalproject\global.cpp
+1702746112 source:c:\users\user\onedrive\desktop\finalproject\finalproject\global.cpp
 	"global.h"
 
-1702731138 source:c:\users\user\onedrive\desktop\finalproject\finalproject\player.cpp
+1702807770 source:c:\users\user\onedrive\desktop\finalproject\finalproject\player.cpp
 	"Player.h"
 	"common/math.h"
+	"DataCenter.h"
+	<iostream>
 
-1702730832 c:\users\user\onedrive\desktop\finalproject\finalproject\player.h
+1702807120 c:\users\user\onedrive\desktop\finalproject\finalproject\player.h
 	"global.h"
 	"object/object.h"
 
-1702726271 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.cpp
+1702752314 source:c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.cpp
 	"ParticleSystem.h"
 	"DataCenter.h"
 
-1702724236 c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.h
+1702745630 c:\users\user\onedrive\desktop\finalproject\finalproject\particlesystem.h
 	<list>
 	<algorithm>
 	"global.h"
@@ -368,15 +371,16 @@
 	<cmath>
 	<iostream>
 
-1702723526 c:\users\user\onedrive\desktop\finalproject\finalproject\datacenter.h
+1702802669 c:\users\user\onedrive\desktop\finalproject\finalproject\datacenter.h
 	"Player.h"
 	"ParticleSystem.h"
+	"Scene.h"
 	"common/random_number.h"
 
 1702543082 source:c:\users\user\onedrive\desktop\finalproject\finalproject\datacenter.cpp
 	"DataCenter.h"
 
-1702713868 source:c:\users\user\onedrive\desktop\finalproject\finalproject\datapanel.cpp
+1702752328 source:c:\users\user\onedrive\desktop\finalproject\finalproject\datapanel.cpp
 	"DataPanel.h"
 	<string>
 	"DataCenter.h"
@@ -411,18 +415,31 @@
 1702720241 c:\users\user\onedrive\desktop\finalproject\finalproject\common\vec2.h
 	"math.h"
 
-1702726167 c:\users\user\onedrive\desktop\finalproject\finalproject\object\particle.h
+1702747485 c:\users\user\onedrive\desktop\finalproject\finalproject\object\particle.h
 	"../global.h"
 	"../common/math.h"
 	"object.h"
 
-1702728948 c:\users\user\onedrive\desktop\finalproject\finalproject\object\object.h
+1702745555 c:\users\user\onedrive\desktop\finalproject\finalproject\object\object.h
 	"../common/math.h"
 
-1702724168 c:\users\user\onedrive\desktop\finalproject\finalproject\common\random_number.h
+1702744122 c:\users\user\onedrive\desktop\finalproject\finalproject\common\random_number.h
 	<random>
+	<chrono>
 
-1702726160 source:c:\users\user\onedrive\desktop\finalproject\finalproject\object\particle.cpp
+1702745764 source:c:\users\user\onedrive\desktop\finalproject\finalproject\object\particle.cpp
 	"Particle.h"
 	"../DataCenter.h"
+
+1702804522 c:\users\user\onedrive\desktop\finalproject\finalproject\scene.h
+	"allegro5/bitmap.h"
+	"common/math.h"
+	<vector>
+
+1702809139 source:c:\users\user\onedrive\desktop\finalproject\finalproject\scene.cpp
+	"Scene.h"
+	"allegro5/allegro.h"
+	"allegro5/allegro_image.h"
+	"global.h"
+	<iostream>
 

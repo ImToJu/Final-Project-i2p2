@@ -29,10 +29,16 @@
 extern bool key_state[ALLEGRO_KEY_MAX];
 extern bool mouse[ALLEGRO_KEY_MAX];
 extern unsigned char mousestate;
-struct CoolDownCounter{ float t, cd; };
+struct CoolDownCounter
+{
+    void resetCD(float _cd){t = 0, cd = _cd;}
+    float t, cd;
+};
 // clock rate
 extern const float FPS;
+extern const float DTIME;
 extern Vec2 mouse_pos;
+
 
 
 #endif // GLOBAL_H_INCLUDED
